@@ -1,0 +1,12 @@
+<div class="movie-list-container">
+  <button (click)="loadMovies()">🍂🍁Load Autumn Movies🥮🧡🎃</button>
+  <p *ngIf="isLoading">Loading...</p>
+  <div class="movie-grid" *ngIf="!isLoading && movies.length > 0">
+    <div class="movie-card" *ngFor="let movie of movies">
+      <img [src]="movie.image" alt="{{ movie.title }}">
+      <h3>{{ movie.title }}</h3>
+      <p>({{ movie.year }})</p>
+    </div>
+  </div>
+  <p *ngIf="!isLoading && movies.length === 0">No movies loaded yet</p>
+</div>

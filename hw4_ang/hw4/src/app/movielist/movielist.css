@@ -1,0 +1,57 @@
+.movie-list-container {
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+button {
+  padding: 20px 30px;
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #a0522d;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* было 180px */
+  gap: 30px; /* немного больше промежутки */
+  margin-top: 25px;
+}
+
+
+.movie-card {
+  background-color: #d9c49a;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  transition: transform 0.3s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #5c4033;
+}
+
+p {
+  color: #8b4513;
+}
