@@ -1,0 +1,21 @@
+<div class="movie-list-container" >
+
+  <h2>🍂🍁Autumn Movie List🧡🎃</h2>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search movie..." (keydown)="onSearch($event)"/>
+</div>
+
+  <button (click)="loadMovies()">Load all movies</button>
+
+  <div *ngIf="isLoading">Loading...</div>
+
+  <div class="movie-grid">
+    <div *ngFor="let movie of movies" class="movie-card">
+      <img [src]="movie.image" alt="{{ movie.title }}" />
+      <h3>{{ movie.title }}</h3>
+      <p>{{ movie.year }}</p>
+    </div>
+  </div>
+
+</div>
