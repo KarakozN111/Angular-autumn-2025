@@ -1,0 +1,62 @@
+<div class="movie-detail-header">
+  <div class="container">
+    <a [routerLink]="['/category', movie?.category]" class="back-button">
+      ← Back to {{movie?.category | titlecase}}
+    </a>
+  </div>
+</div>
+
+<div class="container movie-detail-container">
+  <div *ngIf="movie; else loading" class="movie-detail-card">
+    <div class="movie-detail-hero">
+      <div class="movie-detail-poster">
+        <img [src]="movie.image" [alt]="movie.title" class="movie-poster" (error)="handleImageError($event)">
+      </div>
+      
+      <div class="movie-detail-content">
+        <h1 class="movie-detail-title">{{movie.title}}</h1>
+        
+        <div class="movie-meta-info">
+          <div class="meta-item">
+            <span>📅</span>
+            <span>{{movie.year}}</span>
+          </div>
+          <div class="meta-item">
+            <span>🎬</span>
+            <span>{{movie.director}}</span>
+          </div>
+          <div class="meta-item">
+            <span class="rating-badge">⭐ {{movie.rating}}/10</span>
+          </div>
+        </div>
+        
+        <div class="movie-description">
+          <div class="description-label">Description</div>
+          <p class="description-text">{{movie.description}}</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="trailer-section" *ngIf="movie.trailer">
+      <div class="container">
+        <div class="trailer-label">Watch Trailer</div>
+        <div class="trailer-container">
+          <iframe 
+            width="100%" 
+            height="400" 
+            [src]="movie.trailer | safeUrl" 
+            frameborder="0" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <div class="loading-container">
+      <div class="loading-spinner"></div>
+      <p>Loading movie details...</p>
+    </div>
+  </ng-template>
+</div>
