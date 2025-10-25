@@ -10,7 +10,6 @@ Built with **Angular 20**, **OMDb API**, and **YouTube Data API v3**.
 - 🔍 Search movies by title  
 - 🎥 View full movie details (director, actors, genre, plot, etc.)  
 - ▶️ Watch official trailers from YouTube  
-- 🎞️ Browse movies by categories (Action, Comedy, Drama, etc.)  
 - 💅 Clean, responsive, and modern UI  
 
 ---
