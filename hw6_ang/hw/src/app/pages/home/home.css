@@ -1,0 +1,36 @@
+.home {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+h1 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.shop-btn {
+  display: inline-block;
+  background: #74512D;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.2s;
+}
+.shop-btn:hover {
+  background: #5a3d20;
+}
+.home-img {
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
