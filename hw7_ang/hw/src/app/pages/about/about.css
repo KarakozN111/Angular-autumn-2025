@@ -1,0 +1,29 @@
+.features {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  margin-top: 100px;
+
+}
+.feature h3 {
+  margin-bottom: 10px;
+  color: #74512D;
+}
+.feature p {
+  color: #555;
+  font-size: 14px;
+}
+h1{
+    text-align: center;
+}
