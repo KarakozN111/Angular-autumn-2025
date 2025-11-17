@@ -1,0 +1,5 @@
+<article class="card" (click)="open()"> <!--семантический чтмл элемент-->
+  <img *ngIf="item.thumbnail" [src]="item.thumbnail" alt="{{item.title}}"> 
+  <h3>{{ item.title }}</h3>
+  <p>{{ item.description | slice:0:80 }}...</p>
+</article>
