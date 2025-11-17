@@ -7,8 +7,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* по вертикали */
-  align-items: center;     /* по горизонтали */
+  justify-content: center; 
+  align-items: center;     
   height: 100%;
   gap: 1rem;
 }
