@@ -1,0 +1,23 @@
+.navbar {
+  display:flex;
+  gap:1rem;
+  background:rgb(208, 187, 156);
+  padding:1rem;
+
+}
+
+a{
+  color:rgb(253, 253, 253);
+
+  font-size: 30px;
+  margin-right: 280px;
+  text-decoration: none;
+}
+
+.navbar a.active {
+  font-weight:bold;
+  text-decoration:underline;
+}
+.main { padding:1rem; }
+
+

@@ -1,0 +1,18 @@
+<!--2-->
+<div class="search-wrapper">
+  <div class="search">
+    <input type="text" 
+    placeholder="Search..." 
+    [value]="q" 
+    (input)="onSearch($any($event.target).value)" />
+  </div>
+</div>
+
+<div *ngIf="loading$ | async" class="loading">Loading...</div>
+
+<div class="grid">
+  <item-card
+    *ngFor="let it of (items$ | async)"
+    [item]="it">
+  </item-card>
+</div>
