@@ -1,4 +1,4 @@
-# 🎬 Movie Search App
+# 🎬 Movie Search 
 
 A modern web app for searching movies, viewing detailed information, and watching trailers from YouTube.  
 Built with **Angular 20**, **OMDb API**, and **YouTube Data API v3**.
