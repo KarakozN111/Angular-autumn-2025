@@ -1,0 +1,22 @@
+<h2>Your favorite movies</h2>
+
+<div *ngIf="loading">Loading...</div>
+
+<div *ngIf="!loading && favorites.length === 0">
+  <p>No favorites yet.</p>
+</div>
+
+<ul *ngIf="favorites.length > 0">
+  <li *ngFor="let f of favorites">
+    
+   <img *ngIf="f.poster && f.poster !== ''" [src]="f.poster" alt="poster" />
+
+    <div class="info">
+      <a [routerLink]="f.link">{{ f.title }}</a>
+    </div>
+
+    <button class="trash" (click)="remove(f.id)">
+      🗑️
+    </button>
+  </li>
+</ul>

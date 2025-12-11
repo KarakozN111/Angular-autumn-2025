@@ -1,0 +1,50 @@
+<header class="app-header">
+  <div class="header-container">
+    <a [routerLink]="['/']" class='logo'>Home</a>
+   
+    <!-- Обновленный блок профиля -->
+    <div class="profile-icon">
+      <a [routerLink]="(auth.currentUser$ | async) ? '/profile' : '/login'" class="profile-link">
+        
+        <!--  РЕНДЕРИНГ ФОТО ПРОФИЛЯ В ШАПКЕ -->
+        <div class="profile-avatar">
+          <img *ngIf="userPhotoUrl" 
+               [src]="userPhotoUrl" 
+               alt="Profile" 
+               class="header-profile-pic">
+          <i *ngIf="!userPhotoUrl && (auth.currentUser$ | async)" class='bx bx-user'></i>
+          <i *ngIf="!(auth.currentUser$ | async)" class='bx bx-log-in'></i>
+        </div>
+        
+        <span class="profile-text">
+          <span *ngIf="auth.currentUser$ | async as user">Profile</span>
+          <span *ngIf="!(auth.currentUser$ | async)">Login</span>
+        </span>
+      </a>
+
+      <div *ngIf="!isOnline()" class="offline-banner">
+        You are offline. Some features may not work.
+      </div>
+      
+      <a routerLink="/favorites" class="fav-icon">
+        <i class='bx bx-heart'></i>
+      </a>
+      
+      <i class='bx bx-info-circle info-icon' (click)="isModalOpen = true"></i> 
+    </div>
+  </div>
+</header>
+
+<app-modal [(isOpen)]="isModalOpen">
+  <h3>🍿Welcome to Movie Search!🎬</h3>
+  <p>
+    Movie Search is a website for searching movies and TV series.
+    Enter the movie's name in the search to get information, trailer, and rating.
+    The data is taken from the API <a href="http://www.omdbapi.com/" target="_blank">OMDb</a>.<br>
+    🔍You can search by name, year, or genre for an accurate result.
+  </p>
+</app-modal>
+
+<main class="app-main">
+  <router-outlet></router-outlet>
+</main>

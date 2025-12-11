@@ -1,0 +1,31 @@
+<div class="container" *ngIf="movie">
+  <a routerLink="/" class="btn btn-link mb-3">← Back</a>
+  <div class="row">
+    <div class="col-md-4">
+      <img [src]="movie.image" class="img-fluid" [alt]="movie.title">
+    </div>
+    <button class="add-favorite" (click)="addToFavorites()">Add to Favorites</button>
+
+    <div class="col-md-8">
+      <h2>{{movie.title}} ({{movie.year}})</h2>
+      <p><strong>Director:</strong> {{movie.director}}</p>
+      <p><strong>Writer:</strong> {{movie.writer}}</p>
+      <p><strong>Actors:</strong> {{movie.actors}}</p>
+      <p><strong>Genre:</strong> {{movie.genre}}</p>
+      <p><strong>Runtime:</strong> {{movie.runtime}}</p>
+      <p><strong>Released:</strong> {{movie.released}}</p>
+      <p><strong>Language:</strong> {{movie.language}}</p>
+      <p><strong>Country:</strong> {{movie.country}}</p>
+      <p><strong>Awards:</strong> {{movie.awards}}</p>
+      <p><strong>IMDB Rating:</strong> {{movie.rating}}</p>
+      <p><strong>Metascore:</strong> {{movie.metascore}}</p>
+      <p><strong>Box Office:</strong> {{movie.boxOffice}}</p>
+      <p>{{movie.description}}</p>
+      <div *ngIf="movie.trailer" class="trailer mt-4">
+
+    <h4>Trailer</h4>
+    <iframe width="100%" height="315" [src]="movie.trailer | safeUrl" frameborder="0" allowfullscreen>
+    </iframe>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+/* Общий контейнер профиля */
+:host {
+  display: flex;
+  justify-content: center; /* по горизонтали */
+  align-items: center;     /* по вертикали */
+
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  padding: 100px;
+  background-color: #f9f9f929;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 30px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Левая колонка с фото и кнопками */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Фото пользователя */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Кнопки */
+button {
+  padding: 12px 24px;       /* увеличиваем внутренние отступы */
+  font-size: 18px;           /* увеличиваем размер текста */
+  border: none;
+  border-radius: 10px;       /* чуть больше закругление */
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;           /* чуть более жирный текст */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Кнопка logout */
+.logout-button {
+  background-color: #dc3545;
+}
+
+.logout-button:hover {
+  background-color: #b02a37;
+}
+
+/* Инпут для файла */
+input[type="file"] {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Ссылка на логин */
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Сообщение о незалогиненном пользователе */
+ng-template p {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
