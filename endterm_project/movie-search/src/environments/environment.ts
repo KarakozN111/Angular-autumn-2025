@@ -9,6 +9,6 @@ export const environment = {
   appId: "1:318934977446:web:136222c2f517f3338e5d67",
   measurementId: "G-F9XLYQ02ZW" 
   },
-  youtubeApiKey:'AIzaSyCL1zOM7StFrLjFHZQIadfUxt-TJXLpZOg',
+  youtubeApiKey:'my key',
   omdbApiKey: '1393942c'
 };
